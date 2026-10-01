@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameBreakers - Plataforma de Jogos</title>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <h1>GameBreakers</h1>
+            <p class="subtitle">Sua nova plataforma de jogos</p>
+
+            <div class="tabs">
+                <button class="tab-btn active" onclick="mostrarAba('cadastro')">Cadastro</button>
+                <button class="tab-btn" onclick="mostrarAba('login')">Login</button>
+            </div>
+
+            <form id="formCadastro">
+                <div class="input-group">
+                    <label>Nome de Usuário</label>
+                    <input type="text" id="nome" placeholder="Mínimo 3 caracteres">
+                </div>
+                <div class="input-group">
+                    <label>E-mail</label>
+                    <input type="email" id="email" placeholder="seuemail@exemplo.com">
+                </div>
+                <div class="input-group">
+                    <label>Senha</label>
+                    <input type="password" id="senha" placeholder="Mín. 6 caracteres e 1 número">
+                </div>
+                <div class="input-group">
+                    <label>Confirmar Senha</label>
+                    <input type="password" id="confirmar" placeholder="Repita sua senha">
+                </div>
+                <button type="button" class="btn-submit" onclick="cadastrar()">Criar Conta</button>
+            </form>
+
+            <form id="formLogin" style="display: none;">
+                <div class="input-group">
+                    <label>E-mail</label>
+                    <input type="email" id="loginEmail" placeholder="Email cadastrado">
+                </div>
+                <div class="input-group">
+                    <label>Senha</label>
+                    <input type="password" id="loginSenha" placeholder="Sua senha">
+                </div>
+                <button type="button" class="btn-submit" onclick="fazerLogin()">Entrar</button>
+            </form>
+
+            <p id="mensagem"></p>
+        </div>
+    </div>
+    <script src="script/script.js"></script>
+</body>
+</html>
